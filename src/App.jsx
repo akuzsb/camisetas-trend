@@ -1,11 +1,12 @@
 import React from "react";
 import { MainLayout } from "./layouts";
+import { ItemList } from "./components/ListContainer/ItemList";
 
 function App() {
   return (
     <>
       <MainLayout>
-        <h1>hola</h1>
+        <ItemList greeting="Hello World" />
       </MainLayout>
     </>
   );
