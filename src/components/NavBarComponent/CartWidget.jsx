@@ -7,7 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 export const CartWidget = ({countCart}) => {
   return (
     <Button variant="outline-light p-2 ">
-      <FaShoppingCart className="mx-1" />
+      <FaShoppingCart className="mx-1" title="Ver carrito" />
       <Badge pill bg="secondary mx-1">
         {countCart}
       </Badge>
