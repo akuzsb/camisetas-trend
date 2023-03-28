@@ -1,15 +1,14 @@
 import React from "react";
 import { MainLayout } from "./layouts";
-import { ItemList } from "./components/ListContainer/ItemList";
+// import { ItemList } from "./components/ListContainer/ItemList";
+import { MainRoutes } from "./routes";
 
-function App() {
+export default function App() {
   return (
     <>
       <MainLayout>
-        <ItemList greeting="Hello World" />
+        <MainRoutes />
       </MainLayout>
     </>
   );
 }
-
-export default App;

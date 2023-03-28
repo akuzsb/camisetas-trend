@@ -12,11 +12,9 @@ export const NavBarComponent = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse>
         <Nav >
-          <NavItem src="/nuevas" label="Recién llegadas" />
-          <NavItem src="/futbol" label="Fútbol" />
-          <NavItem src="/basquet" label="Básquet" />
-          <NavItem src="/rugby" label="Rugby" />
-          <NavItem src="/f1" label="Fórmula 1" />
+          <NavItem src="/category/futbol" label="Fútbol" />
+          <NavItem src="/category/basquet" label="Básquet" />
+          <NavItem src="/category/f1" label="Fórmula 1" />
         </Nav>
       <CartWidget countCart="2" />
       </Navbar.Collapse>

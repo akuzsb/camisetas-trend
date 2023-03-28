@@ -1,15 +1,10 @@
 import React from "react";
-import { NavBarComponent } from "../components";
+// import { NavBarComponent } from "../components";
 
 export const MainLayout = ({ children }) => {
   return (
     <>
-     <div>
-
-        <NavBarComponent />
-        {children}
-     </div>
-    
+      <div>{children}</div>
     </>
   );
 };
