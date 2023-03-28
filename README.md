@@ -1,3 +1,3 @@
 Proyecto Camisetas Trend 
 Coderhouse - Curso ReactJS
-PreEntrega1+SantillanBanega
+PreEntrega2+SantillanBanega
