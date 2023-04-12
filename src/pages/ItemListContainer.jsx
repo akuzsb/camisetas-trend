@@ -7,8 +7,6 @@ import { Item } from "../components/ListContainer/Item";
 
 export const ItemListContainer = ({ greeting }) => {
   const { id } = useParams();
-  // si tiene id, busco en el json las categorias que coincidan con el id
-  // si no tiene id, busco en el json todas las categorias
   const products = id
     ? ProductsData.filter((product) => product.category === id)
     : ProductsData;
