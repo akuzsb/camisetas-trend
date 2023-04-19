@@ -1,29 +1,35 @@
 import React from "react";
-import {  Image, Row, Col } from 'react-bootstrap'
+import { Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
 export const Item = ({ item }) => {
-    // item.price a formato moneda
-    const price = new Intl.NumberFormat("es-AR", {
-        style: "currency",
-        currency: "ARS",
-    }).format(item.price);
+  // item.price a formato moneda
+  const price = new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+  }).format(item.precio);
 
   return (
-    <div className="card m-2">
-      <div className="card-body">
-        <h5 className="card-title text-center">{item.title}</h5>
-        <Image src={item.imageUrl} alt={item.title} fluid="true"  />
-
-        <p className="card-text text-center m-1">{price}</p>
-        <Row>
-        <Link to={`/item/${item.id}`} className="btn btn-primary ">
-          Comprar
-        </Link>
-
+    <Card className="m-2">
+      <Card.Img
+        variant="top"
+        src={item.imagenUrl}
+        alt={item.title}
+        style={{ maxWidth: "100%" }}
+      />
+      <Card.Body>
+        <Card.Title className="text-center">{item.titulo}</Card.Title>
+        <Card.Text className="text-center">{price}</Card.Text>
+      </Card.Body>
+      <Card.Footer className="text-center">
+        <Row className="justify-content-center">
+          <Col xs={12}>
+            <Link to={`/item/${item.id}`}>
+              <Button variant="primary">Comprar</Button>
+            </Link>
+          </Col>
         </Row>
-      </div>
-    </div>
+      </Card.Footer>
+    </Card>
   );
 };

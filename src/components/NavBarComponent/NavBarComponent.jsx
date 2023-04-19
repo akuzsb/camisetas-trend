@@ -2,13 +2,16 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { NavItem } from "./NavItem";
 import { CartWidget } from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBarComponent = () => {
 
 
   return (
     <Navbar expand="md" variant="dark" bg="dark">
-      <Navbar.Brand href="/" style={{margin: 6}}> Camisetas Trend</Navbar.Brand>
+      <Link to="/" >
+      <Navbar.Brand style={{margin: 6}}> Camisetas Trend</Navbar.Brand>
+      </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse>
         <Nav >
@@ -16,7 +19,7 @@ export const NavBarComponent = () => {
           <NavItem src="/category/basquet" label="Básquet" />
           <NavItem src="/category/f1" label="Fórmula 1" />
         </Nav>
-      <CartWidget countCart="2" />
+      <CartWidget   />
       </Navbar.Collapse>
       
     </Navbar>
