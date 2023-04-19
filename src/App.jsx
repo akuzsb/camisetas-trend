@@ -1,14 +1,16 @@
 import React from "react";
 import { MainLayout } from "./layouts";
-// import { ItemList } from "./components/ListContainer/ItemList";
-import { MainRoutes } from "./routes";
+import { MainRoutes } from "./routes/MainRoutes";
+import  {CartProvider} from "./context/CartContext";
 
 export default function App() {
   return (
-    <>
-      <MainLayout>
-        <MainRoutes />
-      </MainLayout>
-    </>
+    
+      <CartProvider>
+        <MainLayout>
+          <MainRoutes />
+        </MainLayout>
+      </CartProvider>
+    
   );
 }
