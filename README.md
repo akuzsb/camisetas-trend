@@ -22,8 +22,6 @@ Este comando abrirá una ventana del navegador en la dirección http://localhost
 
 Este proyecto es de carácter educativo y personal, por lo que no se aceptan contribuciones externas. Sin embargo, siéntete libre de clonar el repositorio y usar el código para tus propios proyectos.
 
-Please make sure to update tests as appropriate.
-
 ## Contacto
 Si tienes alguna duda o comentario sobre este proyecto, puedes contactarme a través de mi correo electrónico [agusantillan@hotmail.com](mailto:augustosn24@gmail.com). 
 
