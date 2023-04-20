@@ -22,7 +22,7 @@ export const CartContainer = ({ itemCount }) => {
     setTotal(itemCount.qtyItems);
 
   }, [itemCount]);
-  console.log(itemCount);
+  // console.log(itemCount);
 
   return  total === 0 ? (
     <CartEmpty /> 

@@ -17,6 +17,7 @@ export const CheckoutContainer = () => {
   const [products, setProducts] = useState([]);
   const [orderId, setOrderId] = useState("");
   const [complete, setComplete] = useState(false);
+  const [buyerData, setBuyer] = useState({});
 
 
   useEffect(() => {
@@ -40,6 +41,7 @@ export const CheckoutContainer = () => {
         phone: e.target[3].value,
         address: e.target[4].value,
     };
+    setBuyer(buyer);
 
     if (buyer.name === "" || buyer.lastname === "" || buyer.email === "" || buyer.phone === "" || buyer.address === "") {
         alert("Debe completar todos los campos");
@@ -74,8 +76,6 @@ export const CheckoutContainer = () => {
             emptyCart();
             setLoading(false);
             setComplete(true);
-            console.log("Orden guardada");
-            console.log(orderId);
         });
     };
 
@@ -84,7 +84,7 @@ export const CheckoutContainer = () => {
         <div>
             <h1>Compra realizada con éxito</h1>
             <Alert>
-                <Alert.Heading>Gracias por su compra!</Alert.Heading>
+                <Alert.Heading>Gracias por su compra {buyerData.name}!</Alert.Heading>
                 <p>
                     Su numero de orden es: {orderId}
                 </p>
