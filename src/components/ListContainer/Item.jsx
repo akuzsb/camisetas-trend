@@ -10,7 +10,7 @@ export const Item = ({ item }) => {
   }).format(item.precio);
 
   return (
-    <Card className="m-2">
+    <Card className="m-2 shadow">
       <Card.Img
         variant="top"
         src={item.imagenUrl}

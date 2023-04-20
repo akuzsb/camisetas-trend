@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { NavBarComponent } from "../components";
-import { ItemDetailContainerPage, ItemListContainer, UploadProduct, Cart} from "../pages";
+import { ItemDetailContainerPage, ItemListContainer, UploadProduct, Cart, Checkout} from "../pages";
 
 
 export const MainRoutes = () => {
@@ -13,6 +13,7 @@ export const MainRoutes = () => {
         <Route exact path="/item/:id" element={<ItemDetailContainerPage />} />
         <Route exact path="/uploadProduct" element={<UploadProduct />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/checkout" element={<Checkout />} />
       </Routes>
     </Router>
   );

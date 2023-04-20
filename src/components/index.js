@@ -5,3 +5,4 @@ export * from './AddItemButton/AddItemButton';
 export * from './Toast/ToastComponent';
 export * from './ListContainer/ItemListContainer'; 
 export * from './CartContainer/CartContainer';
+export * from './CheckoutContainer/CheckoutContainer';

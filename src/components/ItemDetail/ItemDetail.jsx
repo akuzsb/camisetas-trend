@@ -8,7 +8,7 @@ export const ItemDetail = ({product}) => {
   // precio a formato moneda
   product.precio = Number(product.precio);
   return (
-    <Card className="m-4">
+    <Card className="m-4 shadow">
       <Row>
         <Col md={6}>
           <Image src={product.imagenUrl} fluid />
@@ -18,7 +18,8 @@ export const ItemDetail = ({product}) => {
           <Badge bg="secondary">{product.categoria}</Badge>
           <h2 className="m-2">{product.precio.toLocaleString("es-AR", {style: "currency",currency: "ARS",})}</h2>
           <p>Cantidad disponible: {product.stock}</p>
-
+          <p>{product.descripcion}</p>
+          
           <Button
             variant="secondary"
             className="m-2"

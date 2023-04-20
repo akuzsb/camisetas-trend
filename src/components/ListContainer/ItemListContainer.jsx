@@ -36,7 +36,7 @@ export const ItemList = () => {
         <Row className="justify-content-md-center">
           {products.map((product) => (
             <Col xs={12} md={6} lg={4}  key={product.id} >
-              <Item item={product} />
+              <Item item={product}  />
             </Col>
           ))}
         </Row>

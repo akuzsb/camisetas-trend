@@ -6,8 +6,12 @@ export const useCartContext = () => useContext(CartContext);
 export const CartProvider = ({ children }) => {
   const [itemCount, setItemCount] = useState({ qtyItems: 0, products: [] });
 
+  const emptyCart = () => {
+    setItemCount({ qtyItems: 0, products: [] });
+  };
+
   const addItem = (product) => {
-    console.log(product);
+    // console.log(product);
     // setItemCount(product);
 
     // console.log(product);
@@ -70,6 +74,7 @@ export const CartProvider = ({ children }) => {
         itemCount,
         addItem,
         removeItem,
+        emptyCart,
       }}
     >
       {children}
