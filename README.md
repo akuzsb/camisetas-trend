@@ -1,6 +1,6 @@
 # Camisetas Trend
 
-Este es un proyecto de maqueta en React para la tienda de ropa "Camisetas Trend".
+Este es un proyecto en React para el Proyecto Final de Coderhouse.
 
 ## Instalación con npm
 
@@ -25,7 +25,7 @@ Este proyecto es de carácter educativo y personal, por lo que no se aceptan con
 Please make sure to update tests as appropriate.
 
 ## Contacto
-Si tienes alguna duda o comentario sobre este proyecto, puedes contactarme a través de mi correo electrónico augustosn24@gmail.com
+Si tienes alguna duda o comentario sobre este proyecto, puedes contactarme a través de mi correo electrónico [agusantillan@hotmail.com](mailto:augustosn24@gmail.com). 
 
 ¡Gracias por utilizar Camisetas Trend!
 ## Licencia
