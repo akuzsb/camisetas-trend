@@ -1,48 +1,37 @@
-import {useState, useEffect } from 'react';
-import { Button, Table } from 'react-bootstrap';
-export const CartContainer = ({itemCount}) => {
-    
-    const [cart, setCart] = useState([]);
-    useEffect(() => {
-        setCart(itemCount.products)
-    }, [itemCount])
+import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { ItemListCart } from "../CartContainer/ItemCartContainer";
+import { CartEmpty } from "./CartEmpty";
 
-    return (
-        <div>
-      <Table>
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-            <th>Total</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {cart.map((item, index) => (
-            <tr key={item.id}>
-              <td>{item.titulo}</td>
-              <td>{item.qty}</td>
-              <td>${item.precio}</td>
-              <td>${item.precio * item.qty}</td>
-              <td>
-                <Button variant="danger" >
-                  Eliminar
-                </Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colSpan={3}>Total:</td>
-            <td colSpan={2}>
-              ${cart.reduce((total, item) => total + item.precio * item.qty, 0)}
-            </td>
-          </tr>
-        </tfoot>
-      </Table>
+export const CartContainer = ({ itemCount }) => {
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
+  
+
+  useEffect(() => {
+    setCart(itemCount.products);
+    setTotal(itemCount.qtyItems);
+  }, [itemCount]);
+  console.log(itemCount);
+
+  return  total === 0 ? (
+    <CartEmpty /> 
+  ) :
+   (
+    <div className="container">
+      <h1>Carrito ({total})</h1>
+      <div className="m-2">
+        {cart.map((item) => (
+          <ItemListCart key={item.id} item={item} />
+        ))}
+      </div>
+
+      <div className="d-flex justify-content-end">
+        <Link to="/checkout">
+          <Button variant="primary">Finalizar compra</Button>
+        </Link>
+      </div>
     </div>
-    )
-}
+  );
+};
