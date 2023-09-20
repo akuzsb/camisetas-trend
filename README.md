@@ -1,6 +1,6 @@
 # Camisetas Trend
 
-Este es un proyecto en React para el Proyecto Final de Coderhouse.
+Este es un proyecto en React.
 
 ## Instalación con npm
 
@@ -23,7 +23,7 @@ Este comando abrirá una ventana del navegador en la dirección http://localhost
 Este proyecto es de carácter educativo y personal, por lo que no se aceptan contribuciones externas. Sin embargo, siéntete libre de clonar el repositorio y usar el código para tus propios proyectos.
 
 ## Contacto
-Si tienes alguna duda o comentario sobre este proyecto, puedes contactarme a través de mi correo electrónico [agusantillan@hotmail.com](mailto:augustosn24@gmail.com). 
+Si tienes alguna duda o comentario sobre este proyecto, puedes contactarme a través de mi correo electrónico [agusantillan@hotmail.com](mailto:agusantillan@hotmail.com). 
 
 ¡Gracias por utilizar Camisetas Trend!
 ## Licencia
